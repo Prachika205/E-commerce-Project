@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Drop - Plant Accessories</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, select, textarea, button {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Buy Plant Accessories</h1>
+        <form action="/submit-form" method="POST">
+            <fieldset>
+                <legend>Customer Information</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required><br>
+                <label for="address">Shipping Address:</label>
+                <textarea id="address" name="address" rows="1" required></textarea><br>
+            </fieldset>
+            <fieldset>
+                <legend>Select Accessories</legend>
+                <label for="pot-type">Pot Type:</label>
+                <select id="pot-type" name="pot-type" required>
+                    <option value="">Choose a pot type</option>
+                    <option value="ceramic">Ceramic</option>
+                    <option value="plastic">Plastic</option>
+                    <option value="terracotta">Terracotta</option>
+                </select>
+
+                <label for="soil-type">Soil Type:</label>
+                <select id="soil-type" name="soil-type" required>
+                    <option value="">Choose soil type</option>
+                    <option value="all-purpose">All-Purpose</option>
+                    <option value="succulent">Succulent</option>
+                    <option value="cactus">Cactus</option>
+                </select><br>
+
+                <label for="tools">Gardening Tools:</label>
+                <select id="tools" name="tools">
+                    <option value="">Choose A Gardening Tool</option>
+                    <option value="pruner">Pruner</option>
+                    <option value="shovel">Shovel</option>
+                    <option value="watering-can">Watering Can</option>
+                    <option value="gloves">Gloves</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Order Details</legend>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bank-transfer">Bank Transfer</option>
+                </select>
+            </fieldset>
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+</body>
+</html>
